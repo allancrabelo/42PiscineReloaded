@@ -1,50 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaugusto <aaugusto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/02 18:08:45 by aaugusto          #+#    #+#             */
-/*   Updated: 2025/04/02 18:24:08 by aaugusto         ###   ########.fr       */
+/*   Created: 2025/04/04 09:38:26 by aaugusto          #+#    #+#             */
+/*   Updated: 2025/04/04 09:54:07 by aaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	ft_strlen(char *str)
+int	ft_count_if(char **tab, int (*f)(char*))
 {
 	int	i;
+	int	count;
 
 	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *src)
-{
-	int		i;
-	char	*new;
-
-	i = 0;
-	new = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));
-	if (!new)
-		return (NULL);
-	while (src[i])
+	count = 0;
+	while (tab[i])
 	{
-		new[i] = src[i];
+		if (f(tab[i]) == 1)
+			count++;
 		i++;
 	}
-	new[i] = '\0';
-	return (new);
+	return (count);
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char *string = "42 School";
-	
-	printf("%s\n", ft_strdup(string));
-	return (0);
-} */
