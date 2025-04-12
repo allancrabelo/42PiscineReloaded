@@ -1,3 +1,5 @@
+![Design sem nome (2)](https://github.com/user-attachments/assets/1efd1345-ad45-45a8-a4bc-e50a5e1bd9e2)
+
 # 42 Piscine Reloaded 🚀
 
 This repository contains my solutions for the 42 Piscine Reloaded. The goal is to reinforce C fundamentals and programming logic, ensuring a solid foundation before moving on to more complex projects.
